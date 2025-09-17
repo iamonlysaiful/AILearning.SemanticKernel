@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using Microsoft.SemanticKernel;
 
-namespace HelloKernel.Plugins;
+namespace KernelInfrastructure.Plugins;
 
 public class HttpPlugin
 {

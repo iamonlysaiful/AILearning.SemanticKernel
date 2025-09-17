@@ -1,9 +1,8 @@
-using HelloKernel.Plugins;
+using KernelInfrastructure.Plugins;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
-using System.Text.Json;
 
 namespace HelloKernel.RoadmapSteps
 {

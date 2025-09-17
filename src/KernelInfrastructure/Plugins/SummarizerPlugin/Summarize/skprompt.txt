@@ -1,0 +1,11 @@
+Summarize the text in exactly 3 sentences.
+
+Example:
+Input: "The weather was rainy, but people enjoyed the festival..."
+Output: "The festival took place during rainy weather. Despite this, attendees still had fun. The event was successful overall."
+
+Now summarize this text:
+
+{{$input}}
+
+Your answer in 3 sentences:

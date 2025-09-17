@@ -1,3 +1,0 @@
-{{$input}}
-
-Summarize the above text in 3-5 sentences.

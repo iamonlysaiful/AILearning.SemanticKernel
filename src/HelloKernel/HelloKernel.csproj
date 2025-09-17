@@ -22,4 +22,8 @@
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KernelInfrastructure\KernelInfrastructure.csproj" />
+  </ItemGroup>
 </Project>

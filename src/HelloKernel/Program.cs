@@ -58,7 +58,7 @@ await HelloKernelSection.RunAsync(kernel);
 // ## AI-generated plan - Sequential
 //await PlanningROrchestration_AIGenerated.RunAsync(kernel);
 
-// # [Section 6]: File I/O, HTTP & Connector patterns
+// # [Section 7]: File I/O, HTTP & Connector patterns
 //await FileIO_HTTP_Connector_WithToolCalling.RunAsync(kernel);
 
 

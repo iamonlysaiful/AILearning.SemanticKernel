@@ -1,4 +1,4 @@
-using HelloKernel.Plugins;
+using KernelInfrastructure.Plugins;
 using Microsoft.SemanticKernel;
 
 namespace HelloKernel.RoadmapSteps

@@ -1,37 +1,28 @@
-using HelloKernel.Plugins;
+using KernelInfrastructure.Plugins;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
-
 namespace HelloKernel.RoadmapSteps
 {
-    public static class ToolRFunction_AutoInvoke
+    public static class PlanningROrchestration_AIGenerated
     {
         public static async Task RunAsync(Kernel kernel)
         {
-
-            // In Step 3, you invoked plugins manually. Now, we’ll enable function calling so the AI chooses when to use them.
-
-            // Import MathPlugin
+            // Import MathPlugin (from Step 3)
             kernel.ImportPluginFromObject(new MathPluginNative(), "math");
 
-            // Get chat service
-            var chat = kernel.Services.GetRequiredService<IChatCompletionService>();
+            // Create planner
+            var history = new ChatHistory("You are an assistant that can call tools.");
 
-            // Create chat history
-            var history = new ChatHistory("You are a helpful assistant. Use tools if needed.");
+            history.AddUserMessage("Add 5 and 7, then tell me today's date.");
 
-            // Example: user asks a question
-            //history.AddUserMessage("What is 5 plus 7?");
-            //history.AddUserMessage("What is todays date?");
-
-            // Enable Tool calling
             var settings = new OpenAIPromptExecutionSettings
             {
                 ToolCallBehavior = ToolCallBehavior.AutoInvokeKernelFunctions
             };
 
+            var chat = kernel.Services.GetRequiredService<IChatCompletionService>();
             var response = await chat.GetChatMessageContentsAsync(history, settings, kernel);
 
             Console.WriteLine("Assistant > " + response[0].Content);

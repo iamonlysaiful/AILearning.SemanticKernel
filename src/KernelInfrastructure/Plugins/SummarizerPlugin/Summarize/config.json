@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "description": "Summarize a given text in 3 sentences. not more than 3 sentences.",
+  "input_parameters": [
+    {
+      "name": "input",
+      "description": "The text to summarize.",
+      "defaultValue": ""
+    }
+  ]
+}

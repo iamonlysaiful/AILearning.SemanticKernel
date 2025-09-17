@@ -1,4 +1,4 @@
-using HelloKernel.Vector;
+using KernelInfrastructure.Vector;
 using Microsoft.Extensions.AI;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.VectorData;
